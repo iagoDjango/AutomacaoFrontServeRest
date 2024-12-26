@@ -17,7 +17,7 @@ describe('Login no site ServerRest',() =>{
     it('CENÁRIO DE TESTE 04: Realizar login com email de usuário em branco!',() =>{
         login.cadastrarNovoUsuarioComEmailEmBranco()
     })
-    it('CENÁRIO DE TESTE 04: Realizar login com senha de usuário em branco!',() =>{
+    it('CENÁRIO DE TESTE 05: Realizar login com senha de usuário em branco!',() =>{
         login.cadastrarNovoUsuarioComSenhaEmBranco()
-        })
+     })
 })
