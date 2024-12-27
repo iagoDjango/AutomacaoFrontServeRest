@@ -1,25 +1,16 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+// Comando para realizar o login e salvar o token no fixture
+Cypress.Commands.add('login', () => {
+    cy.request({
+        method: 'POST',
+        url: 'https://serverest.dev/login',
+        body: {
+            email: 'fulano@qa.com',
+            password: 'teste',
+        },
+    }).then((response) => {
+        expect(response.status).to.equals(200);
+        // Salve o token no arquivo de fixture
+        cy.writeFile('cypress/fixtures/authToken.json', { token: response.body.authorization });
+        cy.log(response.body)
+    });
+});

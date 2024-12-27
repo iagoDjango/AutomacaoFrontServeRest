@@ -11,5 +11,8 @@
   "description": "",
   "dependencies": {
     "cypress": "^13.17.0"
+  },
+  "devDependencies": {
+    "cypress-dark": "^1.8.3"
   }
 }

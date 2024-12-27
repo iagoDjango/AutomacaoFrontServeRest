@@ -8,6 +8,8 @@ export const elements = {
     btnCadastrar:'[data-testid="cadastrar"]',
     validacaoCadastro:'[class="message form-text"]',
     inputNomeUsuario:'input[id="nome"]',
-    verificarLoginComSucesso:'[data-testid="logout"]',
-    validarCampoEmbranco: '[class="alert alert-secondary alert-dismissible"]'
+    validarUsuarioLogado:'[data-testid="logout"]',
+    validarCampoEmbranco: '[class="alert alert-secondary alert-dismissible"]',
+    mensagemCadastroComSucesso:'[class="alert-link"]',
+    sairDoSistema:'[data-testid="logout"]',
 }
