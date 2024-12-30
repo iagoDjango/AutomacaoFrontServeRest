@@ -1,5 +1,5 @@
 
-describe('Cadastro de Produtos', () => {
+describe('Cadastrar de Produtos', () => {
     let token
     before(() => {
         cy.login();
@@ -8,7 +8,7 @@ describe('Cadastro de Produtos', () => {
         cy.fixture('authToken.json').then((data) => {
             token = data.token;
             const produto = {
-                    "nome": "Novo Produto 6",
+                    "nome": "Novo Produto 63",
                     "preco": 470,
                     "descricao": "Mouse",
                     "quantidade": 381
@@ -46,7 +46,6 @@ describe('Cadastro de Produtos', () => {
                     'Authorization': `${token}`,
                 },
                 failOnStatusCode: false
-
             }).then((response) => {
                 expect(response.status).to.equals(400)
                 expect(response.body.message).to.equals('Já existe produto com esse nome');
@@ -63,7 +62,6 @@ describe('Cadastro de Produtos', () => {
                 "preco": 470,
                 "descricao": "Mouse",
                 "quantidade": 381,
-                "administrador": "true"
             };
             cy.request({
                 method: 'POST',
@@ -73,7 +71,6 @@ describe('Cadastro de Produtos', () => {
                     'Authorization': '',
                 },
                 failOnStatusCode: false
-
             }).then((response) => {
                 expect(response.status).to.equals(401)
                 expect(response.body.message).to.equals('Token de acesso ausente, inválido, expirado ou usuário do token não existe mais');

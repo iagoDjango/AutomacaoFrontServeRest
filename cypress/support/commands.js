@@ -4,7 +4,7 @@ Cypress.Commands.add('login', () => {
         method: 'POST',
         url: 'https://serverest.dev/login',
         body: {
-            email: 'fulano@qa.com',
+            email: 'beltrano@qa.com.br',
             password: 'teste',
         },
     }).then((response) => {
