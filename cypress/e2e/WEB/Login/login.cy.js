@@ -24,5 +24,4 @@ describe('Login no site ServerRest',() =>{
     it('CENÁRIO DE TESTE 06: Realizar login com email já cadastrado.',() =>{
         login.cadastrarNovoUsuarioComEmailJaCadastrado()
      })
-
 })

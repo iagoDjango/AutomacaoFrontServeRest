@@ -8,7 +8,7 @@ describe('Cadastrar de Produtos', () => {
         cy.fixture('authToken.json').then((data) => {
             token = data.token;
             const produto = {
-                    "nome": "Novo Produto 63",
+                    "nome": "Novo Produto 99",
                     "preco": 470,
                     "descricao": "Mouse",
                     "quantidade": 381

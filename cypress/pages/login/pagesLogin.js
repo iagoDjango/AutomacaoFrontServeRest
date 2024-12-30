@@ -5,6 +5,7 @@ class Login{
         cy.visit('https://front.serverest.dev/login')
     }
 
+
     cadastrarNovoUsuarioComSucesso(){
         cy.get(elementsPage.linkCadastrarNovoUsuario).click()
         cy.get(elementsPage.inputNomeUsuario).type('Automacao Cypress')
@@ -13,7 +14,6 @@ class Login{
         cy.get(elementsPage.checkBoxAdministrador).click()
         cy.get(elementsPage.btnCadastrar).click()
         cy.get(elementsPage.mensagemCadastroComSucesso)
-
     }
 
     preencherCredenciaisValidas(){

@@ -1,4 +1,5 @@
 // Comando para realizar o login e salvar o token no fixture
+import 'cypress-file-upload';
 Cypress.Commands.add('login', () => {
     cy.request({
         method: 'POST',
